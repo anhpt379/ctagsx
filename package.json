@@ -1,23 +1,23 @@
 {
-  "name": "ctagsx",
-  "displayName": "ctagsx",
+  "name": "ctagsx-puppet",
+  "displayName": "ctagsx-puppet",
   "description": "A fast, cross-platform and working ctags implementation",
   "version": "1.2.1",
-  "publisher": "jtanx",
+  "publisher": "anhpt379",
   "icon": "img/logo.png",
   "engines": {
     "vscode": "^1.63.2"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jtanx/ctagsx.git"
+    "url": "git+https://github.com/anhpt379/ctagsx-puppet.git"
   },
-  "author": "Jeremy Tan",
+  "author": "Anh Pham",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jtanx/ctagsx/issues"
+    "url": "https://github.com/anhpt379/ctagsx-puppet/issues"
   },
-  "homepage": "https://github.com/jtanx/ctagsx",
+  "homepage": "https://github.com/anhpt379/ctagsx-puppet",
   "categories": [
     "Other"
   ],
