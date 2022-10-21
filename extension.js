@@ -136,7 +136,8 @@ function provideDefinition(document, position, canceller) {
     }
 
     if (!tag) {
-        range = document.getWordRangeAtPosition(position)
+        range = document.getWordRangeAtPosition(position, /[a-zA-Z0-9_\-$'":.\/\]\[]+/)
+
         if (!range) {
             console.log('ctagsx: Cannot provide definition without a valid tag (word range)')
             return Promise.reject()
@@ -146,6 +147,13 @@ function provideDefinition(document, position, canceller) {
             console.log('ctagsx: Cannot provide definition with an empty tag')
             return Promise.reject()
         }
+
+        tag = tag.replace(/:$/, '')
+        tag = tag.replace(/^"/, '')
+        tag = tag.replace(/"$/, '')
+        tag = tag.replace(/^'/, '')
+        tag = tag.replace(/'$/, '')
+        tag = tag.replace(/^::/, '')
     }
 
     return ctagz.findCTagsBSearch(document.fileName, tag)
